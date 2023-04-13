@@ -36,6 +36,14 @@ def multiply_polynomials(poly1, poly2):
     
     return result
 
+def swapTo1(arr, n):
+    for i in range(len(arr)):
+        if arr[i] == n:
+            arr[i] = 1
+        else:
+            arr[i] = 0
+    return arr
+
 def swapTo3(arr, n):
     for i in range(len(arr)):
         if abs(arr[i]-n) <= 3:
