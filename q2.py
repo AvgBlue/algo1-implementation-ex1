@@ -94,20 +94,18 @@ def ex2(text,pattern):
 
     copyPattern=[]
     copyText=[]
-    for i in range(20):
-        temp1=list(pattern)
-        temp1.reverse()
-        temp1=swapTo3(temp1,i+1)
-        copyPattern.append(temp1)
-
-        temp2=list(text)
-        temp2=swapTo1(temp2,i+1)
-        copyText.append(temp2)
-
     result = [0] * (len(text) + len(pattern) - 1)
-
     for i in range(20):
-        result=add_arrays(result,multiply_polynomials(copyText[i],copyPattern[i]))
+        copyPattern=list(pattern)
+        copyPattern.reverse()
+        copyPattern=swapTo3(copyPattern,i+1)
+
+        copyText=list(text)
+        copyText=swapTo1(copyText,i+1)
+        
+        result=add_arrays(result,multiply_polynomials(copyText,copyPattern))
+
+        
 
     returnResult=[]
     for i in range(len(result)):
@@ -117,13 +115,9 @@ def ex2(text,pattern):
 
     
 
-
-    
-        
-
 def main():
-    poly1 = [1, 20,1,17,2,3,4,7,2,1,2,3]
-    poly2 = [1,3,1]
+    poly1 = [1, 20,1,17,2,3,4,3,19,1,2,3]
+    poly2 = [1,18,1]
     result = ex2(poly1,poly2)
     print("result = ", result)
     for num in result:
