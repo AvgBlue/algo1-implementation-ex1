@@ -36,14 +36,6 @@ def multiply_polynomials(poly1, poly2):
     
     return result
 
-def swap01(arr):
-	for i in range(len(arr)):
-		if arr[i] == 0:
-			arr[i] = 1
-		else:
-			arr[i] = 0
-	return arr
-
 def swapTo1(arr, n):
     for i in range(len(arr)):
         if arr[i] == n:
@@ -53,27 +45,6 @@ def swapTo1(arr, n):
     return arr
 
 
-def ex0(text,pattern):
-    copyPattern1=list(pattern)
-    copyPattern0=list(pattern)
-    copyText1=list(text)
-    copyText0=list(text)
-
-    copyPattern1.reverse()
-    copyPattern0.reverse()
-    copyPattern0=swap01(copyPattern0)
-    copyText0=swap01(copyText0)
-
-    result1 = multiply_polynomials(copyPattern1,copyText1)
-    result2 = multiply_polynomials(copyPattern0,copyText0)
-
-    result=add_arrays(result1,result2)
-    returnResult=[]
-    for i in range(len(result)):
-        if(result[i]==len(pattern)):
-            returnResult.append(i)
-    return returnResult
-    
 
 def ex1(text,pattern):
     copyPattern0=list(pattern)
