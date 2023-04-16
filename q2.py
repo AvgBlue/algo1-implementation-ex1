@@ -105,8 +105,6 @@ def ex2(text,pattern):
         
         result=add_arrays(result,multiply_polynomials(copyText,copyPattern))
 
-        
-
     returnResult=[]
     for i in range(len(result)):
         if(result[i]==len(pattern)):
