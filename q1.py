@@ -88,7 +88,7 @@ def ex1(text,pattern):
 
 def main():
 	poly1 = [1, 2,0,2,1,1,2,1,1,1]
-	poly2 = [1,1,1]
+	poly2 = [2,1]
 	poly3 = ex1(poly1,poly2)
 	print(poly3)
 

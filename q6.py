@@ -70,7 +70,7 @@ def ex6(text):
     
 
 def main():
-    poly1 = [1,2,3,4]
+    poly1 = [-2,-1,0,1,2]
     result = ex6(poly1)
     print("result = ", result)
 
